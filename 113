@@ -1,4 +1,4 @@
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 1. Multicore processors.
 
 a. Having multiple cores in a processor is potentially beneficial for the performance of task execution. Is it beneficial for the throughput and/or response time of task execution? Why? (5%)
@@ -9,7 +9,7 @@ c. Considering different mixture of the tasks to be executed, when is a multicor
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 2. Memory hierarchy.
 
 a. Draw a generic storage-device hierarchy. (5%)
@@ -18,7 +18,7 @@ b. Explain the organization of the hierarchy in terms of the storage capacity an
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Algorithm]----------------------------------------------------------------------------------------//
 3. Data structures.
 
 a. Explain search tree and hash table in details. Provide an example of each. (5%)
@@ -27,7 +27,7 @@ b. Why are search trees still being widely used, when hash tables seem to provid
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 4. Representation of numbers.
 
 a. Explain and compare fixed-point and floating-point numbers. What are their advantages and drawbacks, respectively? (5%)
@@ -36,12 +36,14 @@ b. Explain one's complement and two's complement. Which one is more commonly use
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
-5. Logical operations. Use C or C++ programming language to implement a function popu_count() that returns the number of bit-1s in an unsigned integer n. The prototype of the function should be int popu_count (unsigned int n). For convenience, you may safely assume that n is 64-bit long, if needed. Please do not use any libraries such as C++ STL. Make your program as efficient as possible. (10%)
+//[Algorithm]----------------------------------------------------------------------------------------//
+5. Logical operations. 
+
+Use C or C++ programming language to implement a function popu_count() that returns the number of bit-1s in an unsigned integer n. The prototype of the function should be int popu_count (unsigned int n). For convenience, you may safely assume that n is 64-bit long, if needed. Please do not use any libraries such as C++ STL. Make your program as efficient as possible. (10%)
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 6. Processes and threads.
 
 a. What are processes and threads? Explain and compare them in detail. (5%)
@@ -50,12 +52,14 @@ b. What are the advantages and limitations of threads, as compared to processes?
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
-7. Concerning the asymptotic notations. Show that Ig(n!) O(n lgn). (10%)
+//[Algorithm]----------------------------------------------------------------------------------------//
+7. Concerning the asymptotic notations. 
+
+Show that Ig(n!) O(n lgn). (10%)
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 8. Define and explain the following problems. When will they happen? What would you suggest to solve each of them, please?
 
 a. Race condition. (5%)
@@ -64,13 +68,13 @@ b. Convoy effect. (5%)
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Operation System]----------------------------------------------------------------------------------------//
 9. Provide simple example(s) to explain the purposes and mechanisms of random backoff?
 How does it work? (5%)
 
 My Ans : 
 
-//----------------------------------------------------------------------------------------//
+//[Algorithm]----------------------------------------------------------------------------------------//
 10. There are many neurons in a neural network, each activated by the activation function. What is an activation function? Explain Sigmoid and ReLU, two popular choices of activation functions. What are their primary advantages and drawbacks, if any? (10%)
 
 My Ans : 
