@@ -55,7 +55,7 @@ My Ans :
 //[Algorithm]----------------------------------------------------------------------------------------//
 7. Concerning the asymptotic notations. 
 
-Show that Ig(n!) O(n lgn). (10%)
+Show that lg(n!)=Θ(n lgn). (10%)
 
 My Ans : 
 
