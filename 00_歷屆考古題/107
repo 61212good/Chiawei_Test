@@ -1,0 +1,45 @@
+1. Number systems. (15%)
+
+(1) Convert the decimal numbers 17 and -35 to 7-bit signed binary numbers. (4%)
+
+(2) What are the largest and smallest of 6-bit signed binary integers, with two's complement? Convert your answers to decimal. (4%)
+
+(3) Why do we prefer two's complement to represent integers? (7%)
+
+2. Sorting algorithms. (20%)
+
+(1) What is a stable sort algorithm? (2%)
+
+(2) The quick sort algorithm is not stable. Explain how to make it stable. (6%) 
+
+(3) What is the best-case and worst-case asymptotic running time of quick sort algorithm on n elements? Assuming a uniformly random distribution of the keys to be sorted, what is the asymptotic running time in the average case of quick sort algorithm on nelements? (6%)
+
+(4) Explain how to use linear median selection to improve the worst-case asymptotic running time of quick sort algorithm. (6%)
+
+3.Hash tables vs. search trees. (15%)
+
+(1) What is the asymptotic worst-case time to insert an element to a self-balancing search tree, such as red-black tree? With assumptions of uniform hashing. what is the asymptotic worst-case time to insert an element to a hash table? (4%)
+
+(2) Explain the two major ways to resolve collision of hash tables. (6%)
+
+(3) While hash tables seem to outperform self-balancing search trees, why are search trees still commonly used? (5%)
+
+4. Operating system concepts. (20%)
+
+(1) Define the term deadlock, and give an example of deadlock. (6%)
+
+(2) What are the conditions that must be satisfied to form a deadlock? (9%)
+
+(3) What is the major problem of a layered design of an operating system? (5%)
+
+5. Computer networks. (15%)
+
+(1) Draw the bus. star, and ring topologies of networks. (6%)
+
+(2) Define and compare the following terms: repeater, bridge, and switch. (9%) 
+
+6.Artificial intelligence. (15%)
+
+(1) Briefly define and explain Turing test. (7%)
+
+(2) Adjust the weights and threshold value of the following neuron in an artificial neural network so that its output is 1 if and only if at least two of its inputs are 1s. (8%)

@@ -1,0 +1,51 @@
+一、[40%] Short answer questions Briefly ariswer the following terminologies):
+
+1. Cross compiler (5%) 
+
+2. Pipelining (5%)
+
+3. Cache memory (5%)
+
+4. Multiprogramming (5%)
+
+5. Internet gateway (5%)
+
+6. Reduced instruction set computer (5%)
+
+7. Binary heap (5%)
+
+8. Supervised learning (5%)
+
+二、[15%] Represent a half adder with:
+
+1. Truth table (5%) 
+
+2. Boolean expression(5%)
+
+3..Draw a logic circuit using only NAND gates (5%)
+
+三、[10%] Answer the following problems of Operating Systems:
+
+1. What is a Virtual Machine? (5%)
+
+2. What is the difference between system virtual machine and process virtual machine?(5%)
+
+四、[15%] Answer the following problems of Computer Networks::
+
+1. What is the difference between MAC address and IP address? (5%) 
+
+2. How to find out MAC and IP addresses in your personal computer?(5%)
+
+3. What is the difference between a static and dynamic IP address? How can we check if have an internal static or dynamic IP on Windows? (5%)
+
+五、[10% ] Answer the following problems of Data Structures:
+
+1. Given a sequence of number in array A, build a binary search tree (BST), where A=<33, 72, 18, 3, 39, 81, 79, 42> (5% )
+
+2. What is worst-case, best-case, and average-case time complexity T(n) for search operation? (5%)
+
+六、[10%] For the following equation: sum(n)=1+2+3+...+n, 
+
+1. Use divide-and-conquer method (data array A[n] is divided by 2) to solve the problem, and write the pseudocode for the recursive algorithm. (5%)
+
+2. Write a recurrence for the time complexity T(n) of the recursive algorithm, then solve the recurrence and represent the time complexity using asymptotic notation. (5%)

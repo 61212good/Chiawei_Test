@@ -1,0 +1,38 @@
+1. Please answer the following calculation. (10%)
+
+(1.) 17 (hexadecimal)+50 (octal) = ?? (decimal) (5%)
+
+(2.) 101 (binary) + 30 (octal)=?? (decimal) (5%)
+
+2. What is the "resolution" of one image/picture? (5%)
+
+3. Please explain the difference between a Stack and a Queue. (10%)
+
+4. Please use the C language to write the code to solve the Fibonacci Sequence in two ways. (The MAIN function should be included.) (25%)
+
+(1.) Using the Loop method. (i.e.. For, While, Do-While) (10%)
+
+(2.) Using the Recursion method. (10%)
+
+(3.) Please explain the difference between the Loop method and the Recursion method. (5%) 
+PS: Fibonacci Sequence: F(1)=1, F(2)=1, If n>2, F(n)=F(n-1)+F(n-2)
+
+5. The disk is currently at Cylinder 52. If the cylinder requests are listed in the following order in which they were received. (20%)
+
+42, 14, 24, 68, 69, 35, 82
+
+(1.) Please list the order in which these requests are handled if using the SCAN disk-scheduling algorithm. The read/write heads are moving toward the higher cylinder numbers. (10%)
+
+(2.) Please list the order in which these requests are handled if using the SSTF (Shortest-Seek-Time-First) disk-scheduling algorithm. (10%)
+
+6. Please explain the following questions about the Heap. (10%) 
+
+(1.) What kind of tree is the Heap? (5%)
+
+(2.) If we implement the Heap using an one-dimensional array, please explain how to calculate the relationship of index values between the parent node and the right-child node. (5%)
+
+7. Please explain the following questions about the TCP. (20%)
+
+(1.) What is the difference between Congestion Control and Flow Control?(10%)
+
+(2.) What is the difference between Go-Back-N and Selective Repeat? (10%)

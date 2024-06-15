@@ -1,0 +1,239 @@
+//----------------------------------------------------------------------------------------//
+1.(10%)Assume that initially we have 
+int x=0; int y=0;
+What could the output of the concurrent execution of process A and process B be?
+(Please list all possible outputs)
+
+	_________________________		_________________________
+	|						|		|						|
+	|	Process A:			|		|	Process B:			|
+	|	while(x==0){		|		|	printf("b");		|
+	|		do-nothing;		|		|	x=1;				|
+	|	}					|		|	while(y==0){		|
+	|	printf("a");		|		|		do-nothing;		|
+	|	y=1;				|		|	}					|
+	|	y=0;				|		|	printf("c");		|
+	|	printf("d");		|		|						|
+	|	y=1;				|		|						|
+	|_______________________|		|_______________________|
+
+My Ans : (1)bacd (2)badc
+
+//----------------------------------------------------------------------------------------//
+2.(20%)Consider a system has 4 physical pages and initially these pages are empty.The system is given a reference string 1,2,3,4,2,5,6,2,3,2,1,6,7.
+(a) How many page fault will occur when the system uses the first-in first-out (FIFO) replacement scheme?(2%)
+(b) Based on (a),what are the remaining pages after the reference string completed?(3%)
+(c) How many page faults will occur when the system uses the least-recently-used(LRU) replacement scheme?(2%)
+(d) Based on (c),what are the remaining pages after the reference string completed?(3%)
+(e) Is it possible to increase the number of physical pages to reduce page faults for FIFO?Why or why not?(5%)
+(f) Is it possible to increase the number of physical pages to reduce page faults for LRU?Why or why not?(5%)
+
+My Ans : (a)10 
+		 (b)1 7 2 3 
+		 (c)9
+		 (d)2 1 6 7
+		 (e)
+		 (f)
+
+//----------------------------------------------------------------------------------------//
+3.(20%)Fill the blanks from (a) to (e) below to complete the functionality of using binary semaphore to implement counting semaphore.You can use wait() and signal() function to decrement and increment semaphore variables.The variable C represents available resources in the system.(each blank is 4%)
+	_____________________________________		_________________________		_________________________
+	|									|		|						|		|						|
+	|	Data structure					|		|	Wait_counting(){	|		|	Signal_counting(){	|
+	|									|		|		wait(S1);		|		|		wait(S1);		|
+	|		Binary semaphore S1 and S2	|		|		C--;			|		|		C++;			|
+	|		int C 						|		|		if(C<0){		|		|		if(C <= 0)		|
+	|		Initial S1=1,S2=0,C=N 		|		|			___(a)___;	|		|			___(d)___;	|
+	|___________________________________|		|			___(b)___;	|		|		else			|
+												|		}				|		|			___(e)___;	|
+												|		___(c)___;		|		|	}					|
+												|	}					|		|						|
+												|						|		|_______________________|
+												|_______________________|
+
+My Ans : (a)Signal(S1)
+		 (b)Wait(S2)
+		 (c)Signal(S1)
+		 (d)Signal(S2)
+		 (e)Signal(S1)
+
+//----------------------------------------------------------------------------------------//
+4.(10%) (a)Given a set {1,5,0,6,2,3,4}, please show the procedure of constructing a maximum heap tree.(5%)
+		(b)Please show the detail procedure of sorting the above integer set (in decreasing order) by heap sort.(5%)
+
+My Ans : use heapify()
+
+//----------------------------------------------------------------------------------------//
+5.(10%)Please implement the fib function called by line 8,i.e,printf("%d, ",fib(i));
+The implemented fib function should be a recursive function,and the function prototype of fib is int fib(int n);
+	_____________________________________________________
+	|													|
+	|	int main(){										|
+	|		int n,i = 0,c;								|
+	|													|
+	|		printf("Please enter term numbers: ");		|
+	|		scanf("%d", &n);							|
+	|		printf("Fibonacci Series: ");				|
+	|		for(i=0;i<n;i++){							|
+	|			printf("%d, ", fib(i));					|
+	|		}											|
+	|		printf("\n");								|
+	|		return 0;									|
+	|	}												|
+	|___________________________________________________|
+
+Simple input and output:
+	Please enter term numbers: 9
+	Fibonacci Series: 0,1,1,2,3,4,8,13,21,
+
+	Please enter term numbers: 4
+	Fibonacci Series: 0,1,1,2,
+
+My Ans :
+		int fib(int i){
+			if(i==1)
+				return 1;
+			else if(i==0)
+				return 0;
+			else
+				return fib(i-1) + fib(i-2);
+		}
+
+//----------------------------------------------------------------------------------------//
+6.(10%)Short answers
+	(a)Please briefly describe the functionality of each layer of OSI 7-layered mode.(7%)
+	(b)What is context switch?(1%)
+	(c)What is interrupt service routine?(1%)
+	(d)What is thrashing?(1%)
+
+My Ans : (a)1. **Physical Layer (Layer 1):**
+			   - Function: Deals with the physical connection between devices.
+			   - Responsibilities: Transmission and reception of raw bit streams over a physical medium.
+
+			2. **Data Link Layer (Layer 2):**
+			   - Function: Responsible for creating a reliable link between two directly connected nodes.
+			   - Responsibilities: Framing, addressing, error detection, and flow control.
+
+			3. **Network Layer (Layer 3):**
+			   - Function: Manages logical addressing and routing of data between devices on different networks.
+			   - Responsibilities: Routing, logical addressing, and fragmentation of data packets.
+
+			4. **Transport Layer (Layer 4):**
+			   - Function: Ensures end-to-end communication and data flow control.
+			   - Responsibilities: Segmentation, reassembly, error detection, and flow control.
+
+			5. **Session Layer (Layer 5):**
+			   - Function: Establishes, maintains, and terminates communication sessions between applications.
+			   - Responsibilities: Dialog control, synchronization, and managing sessions.
+
+			6. **Presentation Layer (Layer 6):**
+			   - Function: Translates data between the application layer and the lower layers.
+			   - Responsibilities: Data translation, encryption, compression, and formatting.
+
+			7. **Application Layer (Layer 7):**
+			   - Function: Provides a user interface and network services for applications.
+			   - Responsibilities: Network-aware applications, user interfaces, and network services such as email, file transfer, and remote login.
+		 (b)A context switch is the process of saving and restoring the state of a process or thread so that execution can be resumed from the same point at a later time. It involves switching the processor from one task to another, allowing multiple tasks to share a single CPU. Context switches are a fundamental aspect of multitasking operating systems, enabling the illusion of concurrent execution by rapidly switching between different tasks.
+		 (c)An Interrupt Service Routine (ISR) is a specialized function or routine that is executed in response to an interrupt. Interrupts are signals or events that can pause the normal execution of a program to handle specific conditions or events. The ISR is designed to quickly and efficiently handle the interrupt, perform necessary actions, and then allow the interrupted program to resume its execution. ISRs are a key component of interrupt-driven systems, such as those found in operating systems and embedded systems, where responsiveness to external events is crucial.
+		 (d)Thrashing is a situation in computer systems, particularly in virtual memory environments, where the operating system is spending a significant amount of time swapping data between the main memory (RAM) and the secondary storage (usually the disk), but little useful computation is being performed. This occurs when the system is overloaded with too many processes or when the working set of each process is too large for the available physical memory. Thrashing can severely degrade system performance as the majority of CPU time is consumed by the swapping process rather than executing application code.
+
+//----------------------------------------------------------------------------------------//
+7.(10%)Consider the following program with fork function
+	(a)How many processes are created by the program shown below (including the initial parent process)?(3%)
+	(b)Draw a tree structure to illusyrate the parent-child relationship in the example.(4%)
+	(c)Provide printf outputs.(3%)
+	_________________________________________________
+	|												|
+	|	#include <stdio.h>							|
+	|	#include <stdlib.h>							|
+	|	#include <sys/types.h>						|
+	|	#include <unistd.h>							|
+	|												|
+	|	int main(void){								|
+	|		int x = 3;								|
+	|		pid_t p1, p2, p3;						|
+	|												|
+	|		p1 = fork();							|
+	|		printf("pt_1: %d\n",x);					|
+	|		if(p1 == 0){							|
+	|			p2 = fork();						|
+	|			if(p2 == 0){						|
+	|				x -= 1;							|
+	|				printf("pt_2: %d\n",x);			|
+	|				exit(0);						|
+	|			}									|
+	|			x += 2;								|
+	|			printf("pt_3: %d\n",x);				|
+	|			exit(0);							|
+	|		}										|
+	|												|
+	|		wait(NULL);								|
+	|		p3 = fork();							|
+	|		if(p3 == 0){							|
+	|			x++;								|
+	|			printf("pt_4: %d\n",x);				|
+	|			exit(0);							|
+	|		}										|
+	|		x+=5;									|
+	|		printf("pt_5: %d\n",x);					|
+	|												|
+	|		wait(NULL);								|
+	|		printf("pt_6: %d\n",x);					|
+	|												|
+	|		return 0;								|
+	|	}											|
+	|												|
+	|_______________________________________________|
+
+My Ans : (a)4
+		 (b)      P
+		         / \
+		        /   \
+		       /     \
+		      P1     P3
+		     /
+		    /
+		   P2
+		 (c)pt_1: 3 (printed by the initial parent and the child created by the first fork)
+			pt_3: 5 (printed by the child created by the first fork)
+			pt_2: 2 (printed by the second child created by the second fork in the child created by the first fork)
+			pt_5: 8 (printed by the initial parent after incrementing x by 5)
+			pt_4: 4 (printed by the child created by the third fork in the initial parent)
+			pt_6: 8 (printed by the initial parent)
+
+//----------------------------------------------------------------------------------------//
+8.(10%)Use C,python,or Java programming language to print the following shape (according to the user inputted "Layers").Note that your program should be executable and include all the details.The grade will be evaluated by the correctness and the quality of your program.
+
+	_____________________	_____________________	_____________________
+	|					|	|					|	|					|
+	|	Layers? 3		|	|	Layers? 5		|	|	Layers? 7		|
+	|	* * *			|	|	* * * * *		|	|	* * * * * * *	|
+	|	  *	*			|	|	  *	* * *		|	|	  * * * * * *	|
+	|	    *			|	|	    * * *		|	|	    * * * * *	|
+	|					|	|	      * *		|	|	      * * * *	|
+	|					|	|	        *		|	|	        * * *	|
+	|					|	|					|	|	          * *	|
+	|					|	|					|	|	            *	|
+	|___________________|	|___________________|	|___________________|
+
+My Ans : 
+
+#include <stdio.h>
+
+int main(){
+	int L;
+	printf("Layers? ");
+	scanf("%d", &L);
+	for(int i = 0; i < L; i++){
+		for(int j = 0; j < i; j++){
+			printf("  ");
+		}
+		for(int k = 0; k < (L - i); k++){
+			printf("* ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+//----------------------------------------------------------------------------------------//
