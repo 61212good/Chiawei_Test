@@ -1,25 +1,50 @@
-/* Towers_org =>
-					01	 |	 |
-					02	 |	 |
-					03	 |	 |
-					04___|___|
-					(A)	(B)	(C)
-*/
+//gcc -o Recursion_Test Recursion_Test.c & Recursion_Test.exe
 
-//	Towers
+#include <stdio.h>
+
+//	1. Towers
 void Towers(int n, char A, char C, char B){
-	if (n = 1){
-		print(“Move disk”, n, “from”, A, “to”, C);
+	if (n == 1){
+		printf("Move disk%d, from %c to %c\n", n, A, C);
 	}else{
 		Towers(n-1, A, B, C);
 
-		print(“Move disk”, n, “from”, A, “to”, C);
+		printf("Move disk%d, from %c to %c\n", n, A, C);
 		
 		Towers(n-1, B, C, A);
 	}
 }
 
+//	2. Greatest Common Divisor (GCD)
+int GCD(int A, int B){
+	if ((A % B) == 0){
+		return B;
+	}else{
+		return GCD(B, (A % B));
+	}
+}
+
+int main(){
+	//	1. Towers
+	char A = 'A';	char B = 'B';	char C = 'C';
+	Towers(2, A, C, B);
+
+	//	2. Greatest Common Divisor (GCD)
+	printf("\nGCD(100, 60) = %d\n", GCD(100, 60));
+	printf("GCD(100, 7) = %d\n", GCD(100, 7));
+
+	return 0;
+}
+
 /*	Towers tracking
+
+Towers_org =>
+					01	 |	 |
+					02	 |	 |
+					03	 |	 |
+					04___|___|
+					(A)	(B)	(C)
+
 Towers(4, placeA, placeC, placeB);
 |->	Towers(3, placeA, placeB, placeC);
 |	|->	Towers(2, placeA, placeC, placeB);
@@ -124,9 +149,8 @@ Towers(4, placeA, placeC, placeB);
 				|	|	2
 				|	|	3
 				|___|___4
-*/
 
-/* Towers_finish =>
+Towers_finish =>
 					 |	 |	 01
 					 |	 |	 02
 					 |	 |	 03
